@@ -47,14 +47,6 @@ export class SupabaseService {
     return this.supabase.auth.onAuthStateChange(callback)
   }
 
-  signIn(email: string) {
-    return this.supabase.auth.signInWithOtp({ email })
-  }
-
-  signOut() {
-    return this.supabase.auth.signOut()
-  }
-
   updateProfile(profile: Profile) {
     const update = {
       ...profile,

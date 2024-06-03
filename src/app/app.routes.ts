@@ -1,13 +1,15 @@
-import { Routes } from '@angular/router';
+import {Routes} from '@angular/router';
 import {LoginComponent} from "./components/login/login.component";
 import {HomeComponent} from "./components/home/home.component";
-import {authGuard} from "./auth.guard";
+import {StandingsComponent} from "./components/standings/standings.component";
 
 export const routes: Routes = [
-    { path: 'standings',
-      // canActivate: [authGuard],
-      loadComponent:()=> import('./components/standings/standings.component').then((com)=> com.StandingsComponent) },
-    { path: 'home', component: HomeComponent },
-    { path: 'login', component: LoginComponent },
-    { path: '', component: LoginComponent },
+    {
+        path: 'standings',
+        // canActivate: [authGuard],
+        component: StandingsComponent
+    },
+    {path: 'home', component: HomeComponent},
+    {path: 'login', component: LoginComponent},
+    {path: '', component: StandingsComponent},
 ];

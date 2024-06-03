@@ -1,3 +1,5 @@
 <h1>Standings work</h1>
 
-<button (click)="HandleLogOut()">Log Out</button>
+<ng-container *ngIf="isLoggedIn">
+    <button (click)="HandleLogOut()">Log Out</button>
+</ng-container>
